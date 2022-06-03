@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>郭孟杰|个人网站</title>
+  <link rel="stylesheet" href="../css/page.css">
+  <script src="../js/vue.js"></script>
+  <script src="./indes.js"></script>
+  
+
+  </style>
+</head>
+
+<body class="back">
+  <!-- 导航 -->
+  <div class="nav" id="nav1">
+    <ul>
+      <li class="logo"><img src="https://www.daiwei.site/static/logo/dw.png" alt=""></li>
+      <li><a href="./index.html">首页</a></li>
+      <li><a href="./boke.html">博客</a></li>
+      <li><a href="./Mysic.html">音乐</a></li>
+      <li><a href="">关于</a></li>
+      <li><a href="">通用js</a></li>
+      <li class="denglu" ><button @click="show">登录</button></li>
+    </ul>
+    <!-- 登录界面 -->
+  <div id="Sign"   v-show="visible" >
+    <div class="hea">
+      <span><a href="">登录</a></span>
+      <span><a href="#">注册</a></span>
+      <button @click="hine" class="x">x</button>
+    </div>
+    <div class="boy">
+      <div>UserName:</div>
+      <input type="text" placeholder="请输入用户名">
+      <div style="margin-top:10px ;">PassWord:</div>
+      <input type="password" placeholder="请出入密码 " ></div>
+      <div class="but">
+        <button >登录</button>
+      </div>
+  </div>
+</div>
+
+</body>
+
+<script>
+  new Vue({
+  el:'#nav1',
+  data:{
+    visible:false
+  },
+  methods:{
+    show(){
+      this.visible=true;
+    },
+    hine(){
+      this.visible=false
+    }
+  }
+})
+</script>
+
+</html>
